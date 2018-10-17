@@ -17,10 +17,12 @@ class App extends Component {
     });
   }
   createList() {
-    this.setState({
-      curr_item: "",
-      items: this.state.items.concat(this.state.curr_item)
-    });
+    if(this.state.curr_item !== ''){
+      this.setState({
+        curr_item: "",
+        items: this.state.items.concat(this.state.curr_item)
+      });
+    }
   }
   render() {
     return (
