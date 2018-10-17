@@ -16,8 +16,7 @@ class App extends Component {
       curr_item: event.target.value
     });
   }
-  createList(event) {
-    event.preventDefault()
+  createList() {
     this.setState({
       curr_item: "",
       items: this.state.items.concat(this.state.curr_item)
@@ -31,10 +30,8 @@ class App extends Component {
             <Item key={index} text={item} />
           ))}
         </ul>
-        <form className="App" onSubmit={this.createList}>
          <input value={this.state.curr_item} onChange={this.handleItem} />
-         <button>Submit</button>
-       </form>
+         <button onClick={this.createList}>Submit</button>
       </div>
     );
   }
