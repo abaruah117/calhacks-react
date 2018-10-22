@@ -36,6 +36,10 @@ body {
   color: rgba(220,220,220,0.6);
 }
 
+input:focus, button:focus {
+  outline: none; 
+}
+
 .todo-input, .todo-submit{
   border: 2px solid white;
   display: inline-block;
@@ -49,6 +53,8 @@ body {
   width: 240px;
   padding: 8px 14px;
   border-right: 0;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
 }
 
 .todo-submit {
@@ -56,6 +62,8 @@ body {
   width: 100px;
   color: #373B44;
   background-color: white;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
 }
 
 .todo-submit:hover {
