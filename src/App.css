@@ -22,6 +22,67 @@
   color: #61dafb;
 }
 
+body {
+  background: #373B44;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.todo-container {
+  text-align: center;
+}
+
+::placeholder {
+  color: rgba(220,220,220,0.6);
+}
+
+.todo-input, .todo-submit{
+  border: 2px solid white;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.todo-input {
+  background-color: transparent;
+  color: white;
+  width: 240px;
+  padding: 8px 14px;
+  border-right: 0;
+}
+
+.todo-submit {
+  padding: 8px;
+  width: 100px;
+  color: #373B44;
+  background-color: white;
+}
+
+.todo-submit:hover {
+  color: white;
+  background-color: transparent;
+}
+
+.todo-item-container {
+  margin: 12px;
+}
+
+.todo-item-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  border: 2px solid white;
+  border-radius: 22px;
+  padding: 8px 14px;
+  width: 300px;
+  display: inline-block;
+  background-color: white;
+  font-size: 22px;
+  color: #373B44;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

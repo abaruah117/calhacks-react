@@ -26,14 +26,15 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="todoList">
-        <ul>
+      <div className="todo-container">
+        
+        <input className="todo-input" placeholder="New Item" value={this.state.curr_item} onChange={this.handleItem} />
+        <button className="todo-submit" onClick={this.createList}>Submit</button>
+        <ul className="todo-item-list">
           {this.state.items.map((item, index) => (
             <Item key={index} text={item} />
           ))}
         </ul>
-         <input value={this.state.curr_item} onChange={this.handleItem} />
-         <button onClick={this.createList}>Submit</button>
       </div>
     );
   }
