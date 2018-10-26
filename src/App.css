@@ -23,9 +23,10 @@
 }
 
 body {
-  background: #373B44;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .todo-container {
@@ -33,7 +34,7 @@ body {
 }
 
 ::placeholder {
-  color: rgba(220,220,220,0.6);
+  color: #4f4f4f;
 }
 
 input:focus, button:focus {
@@ -41,15 +42,16 @@ input:focus, button:focus {
 }
 
 .todo-input, .todo-submit{
-  border: 2px solid white;
+  border: 2px solid #303030;
   display: inline-block;
   font-size: 18px;
   margin-top: 20px;
 }
 
 .todo-input {
+  box-sizing: border-box;
   background-color: transparent;
-  color: white;
+  color: #303030;
   width: 240px;
   padding: 8px 14px;
   border-right: 0;
@@ -58,16 +60,17 @@ input:focus, button:focus {
 }
 
 .todo-submit {
+  box-sizing: border-box;
   padding: 8px;
   width: 100px;
-  color: #373B44;
-  background-color: white;
+  color: #FFD200;
+  background-color: #303030;
   border-top-right-radius: 22px;
   border-bottom-right-radius: 22px;
 }
 
 .todo-submit:hover {
-  color: white;
+  color: #303030;
   background-color: transparent;
 }
 
@@ -81,14 +84,15 @@ input:focus, button:focus {
 }
 
 .todo-item {
-  border: 2px solid white;
+  box-sizing: border-box;
+  border: 2px solid #303030;
   border-radius: 22px;
   padding: 8px 14px;
-  width: 300px;
+  width: 340px;
   display: inline-block;
-  background-color: white;
+  background-color: #303030;
   font-size: 18px;
-  color: #373B44;
+  color: #FFD200;
 }
 
 @keyframes App-logo-spin {
