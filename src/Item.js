@@ -2,7 +2,11 @@ import React, { Component } from "react";
 
 class Item extends Component {
   render() {
-    return <li> {this.props.text} </li>;
+    return (
+    	<div className="todo-item-container">
+    		<li className="todo-item"> {this.props.text} </li>
+    	</div>
+    );
   }
 }
 
