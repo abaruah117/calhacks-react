@@ -1,41 +1,54 @@
-import React, { Component } from "react";
-import "./App.css";
-import Item from "./Item";
+// @format
+import React, {Component} from 'react';
+import './App.css';
+import Item from './Item';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      curr_item: "",
-      items: []
-    };
-    this.handleItem = this.handleItem.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.addItem = this.addItem.bind(this);
+    this.updateColor = this.updateColor.bind(this);
   }
-  handleItem(event) {
+
+  handleInputChange(event) {}
+
+  updateColor(newColor) {
     this.setState({
-      curr_item: event.target.value
+      color: newColor,
     });
   }
-  addItem() {
-    if(this.state.curr_item !== ''){
-      this.setState({
-        curr_item: "",
-        items: this.state.items.concat(this.state.curr_item)
-      });
-    }
-  }
+
+  addItem() {}
+
   render() {
     return (
       <div className="todo-container">
         <div className="input-container">
-          <input className="todo-input" placeholder="New Item" value={this.state.curr_item} onChange={this.handleItem} />
-          <button className="todo-submit" onClick={this.addItem}>Submit</button>
+          <input
+            className="todo-input"
+            placeholder="New Item"
+            onChange={this.handleInputChange}
+          />
+          <button className="todo-submit" onClick={this.addItem}>
+            Submit
+          </button>
         </div>
-        <ul className="todo-item-list">
-          {this.state.items.map((item, index) => (
-            <Item key={index} text={item} />
-          ))}
-        </ul>
+        <ul className="todo-item-list" />
+        <div>
+          <button
+            className="button-color"
+            onClick={() => this.updateColor('#FF0000')}
+          />
+          <button
+            className="button-color"
+            onClick={() => this.updateColor('#00FF00')}
+          />
+          <button
+            className="button-color"
+            onClick={() => this.updateColor('#0000FF')}>
+            Hello
+          </button>
+        </div>
       </div>
     );
   }
